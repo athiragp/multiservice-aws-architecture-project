@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grocery Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🥦 Grocery Store</h1>
+    <input type="text" id="customerName" placeholder="Enter your name">
+</header>
+
+<!-- ✅ NEW: Success / Error Message Container -->
+<div id="message" class="message"></div>
+
+<main class="products">
+    <div class="card">
+        <img src="https://multiservice-project.s3.ap-south-1.amazonaws.com/Apple.jpeg">
+        <h3>Apple</h3>
+        <p>₹120 / kg</p>
+        <button onclick="addToCart('Apple', 120)">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="https://multiservice-project.s3.ap-south-1.amazonaws.com/Banana.jpeg">
+        <h3>Banana</h3>
+        <p>₹50 / dozen</p>
+        <button onclick="addToCart('Banana', 50)">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="https://multiservice-project.s3.ap-south-1.amazonaws.com/Tomato.jpeg">
+        <h3>Tomato</h3>
+        <p>₹40 / kg</p>
+        <button onclick="addToCart('Tomato', 40)">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="https://multiservice-project.s3.ap-south-1.amazonaws.com/Milk.jpeg">
+        <h3>Milk</h3>
+        <p>₹30 / litre</p>
+        <button onclick="addToCart('Milk', 30)">Add</button>
+    </div>
+</main>
+
+<section class="cart">
+    <h2>🛒 Cart</h2>
+    <ul id="cartItems"></ul>
+    <h3>Total: ₹<span id="total">0</span></h3>
+    <button class="order-btn" onclick="placeOrder()">Place Order</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
